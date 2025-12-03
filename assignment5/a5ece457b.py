@@ -3,6 +3,9 @@
 ECE457b Assignment 5
 ======================================
 """
+
+# Credit ChatGPT
+
 import numpy as np
 
 class DecTree:
@@ -23,7 +26,6 @@ class DecTree:
         self.max_depth = 5
 
     def _gini(self, y):
-        # y: 1D array of labels
         if y.size == 0:
             return 0.0
         _, counts = np.unique(y, return_counts=True)
@@ -128,7 +130,7 @@ class kNN:
     def __init__(self):
         self.X_train = None
         self.y_train = None
-        self.k = 5  # you can manually change this attribute after instantiation
+        self.k = 5 
 
     def fit(self, X, y):
         self.X_train = np.asarray(X)
